@@ -24,6 +24,9 @@ jobs:
         env:
           OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
           OPENAI_ORG: ${{ secrets.OPENAI_ORG }} # optional
+          OPENROUTER_KEY: ${{ secrets.OPENROUTER_KEY }}
+          OPENROUTER_SITE_URL: ${{ secrets.OPENROUTER_SITE_URL }} # optional
+          OPENROUTER_SITE_NAME: ${{ secrets.OPENROUTER_SITE_NAME }} # optional
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PINECONE.API_KEY: ${{ secrets.PINECONE_API_KEY }}
           PINECONE.ENVIRONMENT: ${{ secrets.PINECONE_ENVIRONMENT }}
