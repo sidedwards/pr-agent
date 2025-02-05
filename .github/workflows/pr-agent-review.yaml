@@ -5,16 +5,19 @@
 name: PR-Agent
 
 on:
-# pull_request:
-# issue_comment:
+  pull_request:
+      types: [opened, reopened, ready_for_review]
+  issue_comment:
   workflow_dispatch:
 
 permissions:
   issues: write
   pull-requests: write
+  contents: write
 
 jobs:
   pr_agent_job:
+    if: ${{ github.event.sender.type != 'Bot' }}
     runs-on: ubuntu-latest
     name: Run pr agent on every pull request
     steps:
